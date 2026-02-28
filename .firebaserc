@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "personal-fima"
+  },
+  "targets": {
+    "personal-fima": {
+      "hosting": {
+        "app": [
+          "personal-fima"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --animate-sparkle-fall: sparkle-fall 0.8s ease-out forwards;
+  
+  @keyframes sparkle-fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(40px) scale(0); opacity: 0; }
+  }
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff; /* We enforce white/black for the B&W brutalist theme globally */
+    --foreground: #000000;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base structural padding */
+.section-padding {
+  padding: 4rem 1rem;
+}
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 6rem 4rem;
+  }
+}
+
+/* Scroll Snapping Container */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+}
+.snap-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
