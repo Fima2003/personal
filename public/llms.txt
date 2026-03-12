@@ -1,0 +1,24 @@
+# Yukhym (Fima) Rubin | Engineer, Robotics & AI
+
+> 22-year-old software engineer, roboticist, and AI enthusiast.
+
+## Professional Summary
+Yukhym (Fima) Rubin is a talented engineer specializing in software development, machine learning, and robotics. He holds expertise in building scalable systems, training AI models, and creating hardware-software integrations.
+
+## Experience
+- **Ruby.AI**: Chief Technology Officer - Leading technical strategy and architecture for AI solutions.
+- **Telesens**: Software Engineer - Developing and optimizing high-performance software systems.
+- **CloudWorks**: Backend Developer - Designing robust API architectures and database structures.
+
+## Key Projects
+- **Flappy Bird AI**: An autonomous AI model trained to play Flappy Bird using NEAT algorithms. (https://flappy-bird.fimarubin.com/)
+- **Mom Protocol**: A resilient status-tracking website built for his mom to monitor his health. (https://mom-protocol.fimarubin.com)
+- **Anti-Spam Bot**: A Telegram bot utilizing advanced filters to detect and block spam/scams with 99% accuracy. (https://t.me/yun_israel_bot)
+
+## Off The Clock
+- Hobbies include cooking (Grandma's Borsch, Pasta Carbonara), watching movies (The Dark Knight), playing piano, reading books, and tech destruction (breaking & rebuilding hardware).
+- He has an adorable dog named Lizzy.
+
+## Links & Contact
+- **LinkedIn**: https://www.linkedin.com/in/yukhym-rubin/
+- **GitHub**: https://github.com/Fima2003 

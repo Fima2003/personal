@@ -20,9 +20,27 @@ export default function Home() {
 
   return (
     <main className="snap-container bg-white text-black font-sans selection:bg-black selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Yukhym (Fima) Rubin",
+            "url": "https://fimarubin.com",
+            "image": "https://fimarubin.com/images/fima_profile.webp",
+            "jobTitle": "Engineer, Robotics & AI",
+            "sameAs": [
+              "https://www.linkedin.com/in/yukhym-rubin/",
+              "https://github.com/Fima2003"
+            ],
+            "knowsAbout": ["Software Engineering", "Robotics", "AI", "Machine Learning", "CAD"]
+          })
+        }}
+      />
 
       {/* SECTION 1: HERO / WHO AM I */}
-      <section className="snap-section section-padding bg-white relative">
+      <header id="about" className="snap-section section-padding bg-white relative">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}
           variants={staggerContainer}
@@ -64,10 +82,10 @@ export default function Home() {
             </div>
           </motion.div>
         </motion.div>
-      </section>
+      </header>
 
       {/* SECTION 2: MASCOT SPOTLIGHT */}
-      <section className="snap-section section-padding bg-black text-white relative">
+      <aside id="mascot" className="snap-section section-padding bg-black text-white relative">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}
           variants={staggerContainer}
@@ -94,10 +112,10 @@ export default function Home() {
              </div>
           </motion.div>
         </motion.div>
-      </section>
+      </aside>
 
       {/* SECTION 3: PROFESSIONAL JOURNEY */}
-      <section className="snap-section section-padding bg-white text-black relative">
+      <section id="experience" className="snap-section section-padding bg-white text-black relative">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}
           variants={staggerContainer}
@@ -115,7 +133,7 @@ export default function Home() {
               { role: "SE Intern", company: "CloudWorks", current: false, desc: "Foundational cloud infrastructure.", url: "https://cloudwk.com", details: "Project Name: CloudWorks\nMy Position: SE Intern\nWhat I have done:\n[Write an extended description of your accomplishments here...]" },
               { role: "Founder", company: "Music Startup", current: false, desc: "'Tinder for musicians' collaboration platform.", url: "", details: "Project Name: Music Startup\nMy Position: Founder\nWhat I have done:\n[Write an extended description of your accomplishments here...]" }
             ].map((job, i) => (
-              <motion.div
+              <motion.article
                 key={i} 
                 variants={fadeInUp}
                 onClick={() => setSelectedJob(job)}
@@ -138,14 +156,14 @@ export default function Home() {
                   <p className="text-lg font-serif italic mb-6">{job.company}</p>
                   <p className="text-sm border-t-2 border-current pt-4 font-mono leading-relaxed">{job.desc}</p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </motion.div>
       </section>
 
       {/* SECTION 4: HORIZONTAL ARSENAL */}
-      <section className="snap-section section-padding bg-black text-white relative overflow-hidden flex flex-col justify-center items-start">
+      <section id="projects" className="snap-section section-padding bg-black text-white relative overflow-hidden flex flex-col justify-center items-start">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}
           variants={staggerContainer}
@@ -161,7 +179,7 @@ export default function Home() {
             { title: "Mom Protocol", desc: "A custom resilient website built for my mom to easily track my sickness status.", img: "/images/project_mom_protocol.webp", url: "https://mom-protocol.fimarubin.com" },
             { title: "Anti-Spam Bot", desc: "Automatically detects and blocks spam/scam. 99% accuracy (700 correct blocks, 1 incorrect).", img: "/images/project_bot.webp", url: "https://t.me/yun_israel_bot" }
           ].map((project, i) => (
-            <div key={i} className="shrink-0 w-[90vw] md:w-[70vw] snap-center flex flex-col md:flex-row border-4 border-white bg-black">
+            <article key={i} className="shrink-0 w-[90vw] md:w-[70vw] snap-center flex flex-col md:flex-row border-4 border-white bg-black">
               <div className="flex-1 flex flex-col justify-center p-8 md:p-12 order-2 md:order-1 border-t-4 md:border-t-0 md:border-r-4 border-white">
                 <h3 className="text-4xl md:text-5xl font-black uppercase mb-6 tracking-tight">{project.title}</h3>
                 <p className="text-xl md:text-2xl text-gray-400 font-serif mb-12 leading-relaxed">{project.desc}</p>
@@ -172,13 +190,13 @@ export default function Home() {
               <div className="flex-1 relative min-h-[300px] md:min-h-[500px] grayscale hover:grayscale-0 transition-all duration-700 order-1 md:order-2 bg-white border-b-4 md:border-b-0 border-white">
                 <Image src={project.img} alt={project.title} fill sizes="(max-width: 768px) 90vw, 35vw" loading="lazy" className="object-cover" />
               </div>
-            </div>
+            </article>
           ))}
         </motion.div>
       </section>
 
       {/* SECTION 5: FIMA'S PASTA */}
-      <section className="snap-section section-padding bg-black text-white relative">
+      <aside id="chef" className="snap-section section-padding bg-black text-white relative">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}
           variants={staggerContainer}
@@ -205,10 +223,10 @@ export default function Home() {
              />
           </motion.div>
         </motion.div>
-      </section>
+      </aside>
 
       {/* SECTION 6: HORIZONTAL HOBBIES */}
-      <section className="snap-section section-padding bg-white text-black relative overflow-hidden flex flex-col justify-center items-start">
+      <section id="hobbies" className="snap-section section-padding bg-white text-black relative overflow-hidden flex flex-col justify-center items-start">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}
           variants={staggerContainer}
@@ -218,7 +236,7 @@ export default function Home() {
           <motion.span variants={fadeInUp} className="text-2xl font-mono hidden md:block bg-black text-white px-4 py-2 font-bold select-none border-2 border-black">06. SCROLL →</motion.span>
         </motion.div>
 
-        <motion.div variants={fadeInUp} className="flex overflow-x-auto gap-8 snap-x snap-mandatory hide-scrollbar pb-8 px-8 md:px-16 w-full pr-16">
+        <motion.div variants={fadeInUp} className="flex overflow-x-auto overflow-y-hidden gap-8 snap-x snap-mandatory hide-scrollbar pb-8 px-8 md:px-16 w-full pr-16">
           {[
             { title: "Grandma's Borsch", type: "Food", desc: "A hot, vibrant bowl of tradition.", img: "/images/hobby_borsch.webp", icon: <Heart size={20}/> },
             { title: "The Dark Knight", type: "Movie", desc: "A cinematic masterpiece.", img: "/images/hobby_movie.webp", icon: <Youtube size={20}/> },
@@ -226,7 +244,7 @@ export default function Home() {
             { title: "Reading Books", type: "Hobby", desc: "Ink on paper narratives.", img: "/images/hobby_books.webp", icon: <span className="text-xl">📚</span> },
             { title: "Tech Destruction", type: "Passion", desc: "Breaking & rebuilding stuff.", img: "/images/hobby_rebuild.webp", icon: <Terminal size={20}/> }
           ].map((hobby: any, i) => (
-            <div 
+            <article 
               key={i} 
               className="shrink-0 w-min max-w-[85vw] snap-center flex flex-col border-4 border-black bg-white group cursor-crosshair h-[60vh] md:h-[600px]"
               onClick={() => {
@@ -270,13 +288,13 @@ export default function Home() {
                 </div>
                 <p className="text-lg md:text-xl font-serif text-gray-700 border-l-4 border-black pl-4 my-2 md:my-4">{hobby.desc}</p>
               </div>
-            </div>
+            </article>
           ))}
         </motion.div>
       </section>
 
       {/* SECTION 7: CONNECT */}
-      <section className="snap-section section-padding bg-black text-white flex flex-col items-center justify-center text-center relative selection:bg-white selection:text-black">
+      <footer id="contact" className="snap-section section-padding bg-black text-white flex flex-col items-center justify-center text-center relative selection:bg-white selection:text-black">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.3 }}
           variants={staggerContainer}
@@ -293,7 +311,7 @@ export default function Home() {
             Go to LinkedIn
           </motion.a>
         </motion.div>
-      </section>
+      </footer>
       
       {/* JOB MODAL */}
       <AnimatePresence>

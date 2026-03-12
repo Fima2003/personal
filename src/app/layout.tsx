@@ -16,6 +16,17 @@ export const metadata: Metadata = {
   title: "Yukhym (Fima) Rubin | Engineer, Robotics & AI",
   description: "Personal website of Yukhym (Fima) Rubin - a 22-year-old engineer specializing in software, robotics, CAD, and AI. Curious mind and innovative solution-driven personality.",
   keywords: ["Yukhym Rubin", "Fima Rubin", "Software Engineer", "Robotics", "AI", "CAD", "Telesens", "Ruby.AI", "Portfolio"],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Yukhym (Fima) Rubin | Engineer & Developer",
     description: "Discover the professional journey, projects, and hobbies of Yukhym (Fima) Rubin.",
