@@ -15,7 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Yukhym (Fima) Rubin | Engineer, Robotics & AI",
   description: "Personal website of Yukhym (Fima) Rubin - a 22-year-old engineer specializing in software, robotics, CAD, and AI. Curious mind and innovative solution-driven personality.",
-  keywords: ["Yukhym Rubin", "Fima Rubin", "Software Engineer", "Robotics", "AI", "CAD", "Telesens", "Ruby.AI", "Portfolio"],
+  keywords: [
+    "Yukhym Rubin", "Fima Rubin", "Fima", "Yukhym",
+    "Software Engineer", "Software Developer", "Engineer", "Developer", "Expert",
+    "Robotics", "Robotics Engineer", "AI", "Artificial Intelligence", "Machine Learning",
+    "CAD", "Mechanical Design", "Automation",
+    "Israel", "Israeli Engineer", "Israeli Developer", "Tel Aviv", "Haifa",
+    "Full Stack", "Full Stack Developer", "Backend", "Frontend",
+    "Python", "TypeScript", "React", "Next.js",
+    "Telesens", "Ruby.AI",
+    "Portfolio", "Personal Website", "Tech Portfolio"
+  ],
   icons: {
     icon: [
       { url: "/favicon.ico" },
